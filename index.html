@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<title>Lucky Wheel</title>
-
-<link rel="stylesheet" href="style.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原生 Canvas 互動引力彈珠</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div id="landing">
-    <h1>🎡 Lucky Wheel</h1>
+    <div id="landing-page">
+        <div class="card">
+            <h1>Gravity Orbs</h1>
+            <p class="subtitle">空間引力互動遊戲 (Canvas 版)</p>
+            
+            <div class="instructions">
+                <h3>🎮 互動指南</h3>
+                <ul>
+                    <li><strong>滑鼠點擊 / 拖曳：</strong> 發射彩色彈珠</li>
+                    <li><strong>空白鍵 (Space)：</strong> 切換引力方向（向下 ⇄ 向中心）</li>
+                    <li><strong>C 鍵 (Clear)：</strong> 清除畫面上所有彈珠</li>
+                </ul>
+            </div>
+            
+            <button id="start-btn">進入空間</button>
+        </div>
+    </div>
 
-    <p>按space旋轉轉盤</p>
+    <canvas id="gameCanvas"></canvas>
 
-    <button onclick="startGame()">
-        開始
-    </button>
-</div>
-
-<div id="result">
-    今日運勢：尚未抽取
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
